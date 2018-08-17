@@ -1,0 +1,10 @@
+version: '2'
+services:
+  devserver:
+    build: ./docker-devserver
+    privileged: true
+    command: /sbin/init
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html

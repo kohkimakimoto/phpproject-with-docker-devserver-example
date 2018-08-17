@@ -1,0 +1,9 @@
+[Unit]
+After=mysqld.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/bootscript.sh
+
+[Install]
+WantedBy=default.target
